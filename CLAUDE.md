@@ -2,7 +2,7 @@
 
 ## 项目概述
 
-Skill 蒸馏攻防 Agent 大赛（Python Demo）——一个 AI Agent 竞赛框架。参赛者构建 Agent 来回答赛方题目，通过 MCP-style tools、skills 和 sub-agents 完成任务。项目使用纯 Python 标准库，无需第三方依赖（可选 fastmcp）。
+Skill 蒸馏攻防 Agent 大赛（Python Demo）——一个 AI Agent 竞赛框架。参赛者构建 Agent 来回答赛方题目，通过 MCP-style tools、skills 和 sub-agents 完成任务。
 
 ## 目录结构
 
@@ -158,8 +158,8 @@ def register_tools(*, register_tool, object_schema):
 
 ## 注意事项
 
-- `requirements.txt` 为空，项目仅依赖 Python 标准库
-- `start.sh` 中 venv 创建和 pip install 默认注释掉，如需第三方包需取消注释并填写 `requirements.txt`
+- 如需使用第三方库，将依赖添加到 `requirements.txt`，`start.sh` 中 venv 和 pip install 已配置好会自动安装
+- 不再限定纯 Python 标准库，参赛者可自由引入第三方包
 - `package_id` 作为 HTTP header 传递给模型网关
 - 工具调用结果截断到 12000 字符，SKILL.md 截断到 20000 字符，文件读取截断到 64000 字符
 - Windows/MINGW 环境下 `start.sh` 会优先检测 `python` 命令
